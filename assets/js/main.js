@@ -8,9 +8,9 @@
 
 //Creazione oggetto studente
 var studente = {
-  'nome': 'Francesco',
-  'cognome': 'Porti',
-  'eta': 27
+  'nome' : 'Francesco',
+  'cognome' : 'Porti',
+  'eta' : 27
 };
 
 // console.log(studente);
@@ -21,3 +21,30 @@ for (var key in studente) {
 }
 
 //Creo array di oggetti di studenti
+
+var studenti = [
+  {
+    'nome' : 'Andre',
+    'cognome' : 'Pitti',
+    'eta' : 17
+  },
+  {
+    'nome' : 'Elisabetta',
+    'cognome' : 'Maffi',
+    'eta' : 24
+  },
+  {
+    'nome' : 'Federico',
+    'cognome' : 'Lapis',
+    'eta' : 31
+  },
+  {
+    'nome' : 'Franca',
+    'cognome' : 'Villa',
+    'eta' : 45
+  },
+];
+
+for (var key in studenti) {
+  console.log(studenti[key].nome + ' ' + studenti[key].cognome);
+}
