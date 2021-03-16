@@ -13,17 +13,19 @@ var studente = {
   'eta' : 27
 };
 
-// console.log(studente);
-
 //Stampo a schermo con il ciclo for in
+var primoStudente = '';
+
 for (var key in studente) {
-  console.log(studente[key]);
+  primoStudente += studente[key] + ' ';
 }
+$('#studente').text(primoStudente);
+
 
 //Creo array di oggetti di studenti
 var studenti = [
   {
-    'nome' : 'Andre',
+    'nome' : 'Andrea',
     'cognome' : 'Pitti',
     'eta' : 17
   },
@@ -45,16 +47,17 @@ var studenti = [
 ];
 
 //Uso il ciclo for in e stampo nome e cognome di tutti gli studenti
+var printStudenti = '';
 for (var key in studenti) {
-  console.log(studenti[key].nome + ' ' + studenti[key].cognome);
+  printStudenti += studenti[key].nome + ' ' + studenti[key].cognome + ' ';
 }
+$('#studenti').text(printStudenti);
 
 //Seleziono il bottone di Invio
 $('button').click(function(){
   var nome = $('#nome').val();
   var cognome = $('#cognome').val();
   var eta = $('#eta').val();
-  // console.log(nome, cognome, eta);
 
   //Salvo dati in un nuovo oggetto
   var nuovoStudente = {
@@ -62,11 +65,14 @@ $('button').click(function(){
     cognome : cognome,
     eta : parseInt(eta),
   }
-  // console.log(nuovoStudente);
 
   //Pusho oggetto nell'array
   studenti.push(nuovoStudente);
 
-  //Stampo studenti
-  console.log(studenti);
+  //Stampo studenti con età e con quello inserito dall'utente
+  var printStudenti = '';
+  for (var key in studenti) {
+    printStudenti += studenti[key].nome + ' ' + studenti[key].cognome + ' ' + studenti[key].eta + ' ';
+  }
+  $('#studenti-aggiornato').text(printStudenti);
 });
