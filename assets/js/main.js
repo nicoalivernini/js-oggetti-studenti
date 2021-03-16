@@ -54,6 +54,19 @@ $('button').click(function(){
   var nome = $('#nome').val();
   var cognome = $('#cognome').val();
   var eta = $('#eta').val();
-  console.log(nome, cognome, eta);
+  // console.log(nome, cognome, eta);
 
-})
+  //Salvo dati in un nuovo oggetto
+  var nuovoStudente = {
+    nome : nome,
+    cognome : cognome,
+    eta : parseInt(eta),
+  }
+  // console.log(nuovoStudente);
+
+  //Pusho oggetto nell'array
+  studenti.push(nuovoStudente);
+
+  //Stampo studenti
+  console.log(studenti);
+});
