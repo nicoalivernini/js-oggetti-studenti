@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+input {
+  margin: 0 10px;
+}
+
+#nome, #cognome, #eta {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+button {
+  padding: 5px;
+  margin: 0 5px;
+}
