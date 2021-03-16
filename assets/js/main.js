@@ -21,7 +21,6 @@ for (var key in studente) {
 }
 
 //Creo array di oggetti di studenti
-
 var studenti = [
   {
     'nome' : 'Andre',
@@ -45,6 +44,16 @@ var studenti = [
   },
 ];
 
+//Uso il ciclo for in e stampo nome e cognome di tutti gli studenti
 for (var key in studenti) {
   console.log(studenti[key].nome + ' ' + studenti[key].cognome);
 }
+
+//Seleziono il bottone di Invio
+$('button').click(function(){
+  var nome = $('#nome').val();
+  var cognome = $('#cognome').val();
+  var eta = $('#eta').val();
+  console.log(nome, cognome, eta);
+
+})
